@@ -15,6 +15,9 @@ const inputGoal = document.getElementById("goal")
 const page1 = document.getElementById("scene1")
 const page2 = document.getElementById("scene2")
 const NewGameButton = document.getElementById("newGame")
+const player1audio= document.getElementById("audio1")
+const player2audio= document.getElementById("audio2")
+
 let maxScore
 let flag = 1;
 let score1 = 0;
@@ -44,12 +47,15 @@ function RollDice1() {
   if (flag) {
     Checkiamge(Random1, Random2);
     score1 += Random1 + Random2;
-   
     current1.innerHTML = score1;
+    player1audio.play()
+    player2audio.pause()
     
   } else {
     Checkiamge(Random1, Random2);
     score2 += Random1 + Random2;
+    player1audio.pause();
+    player2audio.play();
     
     current2.innerHTML = score2;
   }
@@ -96,7 +102,9 @@ function Resetallgame() {
   dice1.innerHTML = "";
   dice2.innerHTML = "";
   hold.disabled=false
-    RollButton.disabled=false;
+    RollButton.disabled=false; 
+    player1audio.pause()
+    player2audio.pause()
  
 
   holdButton(0);
