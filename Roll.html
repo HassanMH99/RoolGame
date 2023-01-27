@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <article id="scene1">
+        <h1>The Game Of Dice</h1>
+        <h2>Rules & Dicreption</h2>
+        <p>
+          Roll game is a 2 player game, playing in rounds, In each turn, a player
+          rolls 2 dice as many times as he wishes. Each result will get added to
+          his round’s score. But if the player rolls a double six all his round’s
+          score gets lost. After that, it's the next player’s turn. A player can
+          choose to ‘Hold’, which means that his round’s score gets added to his
+          global score. After that, it's the next player's turn. The first player
+          to pass predefined score points loose. The first player to reach
+          predefined score exactly wins.
+        </p>
+        <div>
+            <div>
+                <label for="goal">Winning score:</label>
+                <input type="number" id="goal"  />
+              </div>
+        
+        <button id="start-button">Start</button>
+        </article>
+    <article id="scene2">
+        <main>
+            <div id="div1"></div>
+            <div id="div2">
+                <div class="header-players">
+                    <h1>Player1</h1>
+                    <p id="total1"></p>
+                </div>
+            <div class="current-score">
+                <p id="winner1"></p>
+                <h2>Current</h2>
+                <p id="current1"></p>
+            </div>
+        
+            </div>
+            <div id="div3">
+                <div class="header-players">
+        
+                    <h1>Player2</h1>
+                    <p id="total2"></p>
+                </div>
+                <div class="current-score">
+                    <p id="winner2"></p>
+                    <h2>Current</h2>
+                    <p id="current2"></p>
+        
+                </div>
+            </div>
+            <div id="div4"></div>
+        </main>
+        <aside>
+            <button id="newGame">NEW Game</button>
+            <div id="roll1"></div>
+            <div id="roll2"></div>
+            <button id="RollDice" onclick="RollDice1()">ROLL DICE</button>
+            <button id="hold" onclick="Hold()">HOLD</button>
+            <button id="Reset" onclick="Resetallgame()">Resetgame</button>
+        </aside>
+    </article>
+    <script src="script.js"></script>
+</body>
+</html>

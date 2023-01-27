@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+#div1{
+    background-color: purple;
+}
+#div2{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+#div3{
+    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#div4{
+    background-color: purple;
+}
+main{
+    height: 100%;
+    width: 100%;
+display: grid;
+grid-template-columns: 1fr 3fr 3fr 1fr;
+
+
+}
+
+
+.header-players1,.header-players2{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.current-score{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;  
+}
+p{
+    font-size: 40px;
+}
+#roll1,#roll2,img{
+   
+    width: 5em;
+    height: 5em
+}
+
+aside{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    
+}
+
+
+
+button{
+    background-color: antiquewhite;
+    border-radius: 2px solid antiquewhite;
+    width: 15%;
+    height: 5%;
+    border-radius: 10px;
+}
+#hold{
+    width: 10%;
+   
+}
+article{
+    width: 100%;
+    height: 100%;
+}
+#scene2{
+    display: none;
+}
+#scene1{
+    background-color: antiquewhite;
+}
+#scene1 {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    padding: 5%;
+    font-size: 1.5rem;
+   
+    height: 100vh;
+    color: black;
+}
+#scene1 h1,#scene1 h2 {
+    text-align: center;
+}
+#scene1 p{
+    font-size: large;
+}
+#scene1 input{
+    font-size: 1em;
+    width: 3em;
+}
+#scene1 button {
+    border: black solid 2px;
+    color: black;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
