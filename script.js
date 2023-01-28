@@ -40,8 +40,8 @@ startbutton.addEventListener('click',()=>{
     maxScore = inputGoal.value
 })
 function RollDice1() {
-  const Random1 = Math.floor(Math.random() * 6) + 1;
-  const Random2 = Math.floor(Math.random() * 6) + 1;
+  const Random1 = Math.floor(Math.random() * 6) + 1
+  const Random2 = Math.floor(Math.random() * 6) + 1
 
   holdButton(1);
   if (flag) {
@@ -50,14 +50,29 @@ function RollDice1() {
     current1.innerHTML = score1;
     player1audio.play()
     player2audio.pause()
+    if(Random1===6&&Random2===6){
+        reset();
+        totalscore1=0
+        current1.innerHTML=0
+        total1.innerHTML=totalscore1;
+        
+        
+    }
     
   } else {
     Checkiamge(Random1, Random2);
     score2 += Random1 + Random2;
     player1audio.pause();
     player2audio.play();
-    
     current2.innerHTML = score2;
+    if(Random1===6&&Random2===6){
+        reset();
+        totalscore2=0
+        current2.innerHTML=0
+        total2.innerHTML=totalscore2;
+        
+        
+    }
   }
 }
 
@@ -128,7 +143,7 @@ function Checkiamge(check1, check2) {
     dice2.appendChild(img2);
   }
   function reset() {
-    score1 = score2 = 0;
+    score1 = score2 =0;
   }
   function Hold() {
     flag = !flag;
