@@ -1,5 +1,5 @@
-const player1 = document.getElementById("header-player1");
-const player2 = document.getElementById("header-player2");
+const player1 = document.getElementById("div2");
+const player2 = document.getElementById("div3");
 const total1 = document.getElementById("total1");
 const total2 = document.getElementById("total2");
 const current1 = document.getElementById("current1");
@@ -50,6 +50,7 @@ function RollDice1() {
     current1.innerHTML = score1;
     player1audio.play()
     player2audio.pause()
+    ColorStyle(flag)
     if(Random1===6&&Random2===6){
         reset();
         totalscore1=0
@@ -60,11 +61,14 @@ function RollDice1() {
     }
     
   } else {
+    ColorStyle(flag)
     Checkiamge(Random1, Random2);
     score2 += Random1 + Random2;
     player1audio.pause();
     player2audio.play();
     current2.innerHTML = score2;
+    
+    
     if(Random1===6&&Random2===6){
         reset();
         totalscore2=0
@@ -147,10 +151,20 @@ function Checkiamge(check1, check2) {
   }
   function Hold() {
     flag = !flag;
+    ColorStyle(flag)
     current1.innerHTML = 0;
     current2.innerHTML = 0;
     TurnGame();
     holdButton(0);
+  }
+  function ColorStyle(flag){
+    if(flag){
+        player1.style.backgroundColor ="red"
+ player2.style.backgroundColor ="aquamarine"
+ }else{
+     player2.style.backgroundColor="red";
+     player1.style.backgroundColor="pink";
+ }
   }
   function holdButton(flag) {
     if (flag) {
